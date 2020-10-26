@@ -800,19 +800,23 @@ margin-bottom: 50px;
     width: 195px;
     height: 245px;
 }
-@media (max-width: 330px){
+}
+@media (max-width: 360px){
     .out {
     font-size: 1.4em;
 }
 .about_me h1 {
     font-size: 1.85em;
     }
+.item_me {
+    width: 100%;
 }
-.photo_me {
-    width: 207px;
-    height: 245px;
+.me_features {
+    margin-top: 45px;
 }
 
+
+}
 @media (max-width: 250px){
     .about_me h1 {
     font-size: 1.55em;
