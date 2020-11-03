@@ -48,7 +48,6 @@ display: flex;
 text-align: center;
 flex-direction: column;
 justify-content: center;
-padding: 150px 0;
 }
 @font-face {
     font-family: 'icomoon';
@@ -497,7 +496,7 @@ src:url("fonts/GraphikSemibold.ttf") format("ttf")
 
 .skills{
     width:100%;
-    height: auto;
+    height: 850px;
     align-items: center;
     display: flex;
     justify-content: center;
@@ -658,6 +657,9 @@ justify-content: space-around;
     display: flex;
     padding: 25px 0;
 }
+.skills{
+    height: 1160px;
+}
 }
 @media (max-width: 1250px){
     .descript-logo {
@@ -801,6 +803,9 @@ justify-content: space-around;
 @media (max-width: 660px){
     .fcard{
         width: 100%;
+    }
+    .skills{
+        height: 1950px;
     }
     .me_about {
     flex-direction: column;
