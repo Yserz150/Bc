@@ -658,7 +658,7 @@ justify-content: space-around;
     padding: 25px 0;
 }
 .skills{
-    height: 1160px;
+    height: 1300px;
 }
 }
 @media (max-width: 1250px){
@@ -801,11 +801,17 @@ justify-content: space-around;
     width: 50%;
     }
 @media (max-width: 660px){
+    .card.expanded {
+    height: 385px;
+}
+.title__header {
+    margin-bottom: 25px;
+}
     .fcard{
         width: 100%;
     }
     .skills{
-        height: 1950px;
+        height: 2100px;
     }
     .me_about {
     flex-direction: column;
@@ -913,9 +919,6 @@ justify-content: space-around;
 }
 .card{
     width: 230px;
-}
-.card.expanded {
-    height: 385px;
 }
 }
 @media (max-width: 260px){
