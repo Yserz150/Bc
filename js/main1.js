@@ -32,6 +32,10 @@ function runTyping()
 		        sentence++;
 
 		        deleteInterval = setInterval(function() {
+		        	if ($(window).width() <= '950')
+					  {
+						$("header").removeAttr( 'style' );
+					  }
 		        	element.innerHTML = element.innerHTML.substr(0, currentChar - 1);
 		          	
 		          currentChar--;
