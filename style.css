@@ -468,6 +468,7 @@ src:url("fonts/GraphikSemibold.ttf") format("ttf")
     transition: all 0.3s ease-out;
     padding-right: 50px;
     flex-wrap: wrap;
+    transition: all 0.3s ease-out;
 }
 .item_me{
     line-height: 1.5;
@@ -835,7 +836,19 @@ font-family: 'Raleway';
     background-color: #058e79;
     color: #1d1d1d;
 }
-
+#console {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    width: 300px;
+    margin-left: -150px;
+    text-align: center;
+    background: #666;
+    padding: 10px;
+    opacity: 0.5;
+    color: #fff;
+    z-index: 100;
+}
 
 
 
@@ -883,6 +896,9 @@ font-family: 'Raleway';
     height: 165px;
     width: 170px;
 }
+.me_features {
+    width: 95%;
+    }
 }
 @media (max-width: 1050px){
 .animation {

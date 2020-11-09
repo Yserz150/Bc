@@ -10,115 +10,47 @@ $(window).scroll(function(){
 $(document).ready(function(){ 
   scrollTracking();
 });
-var block_show = null;
-var setting = false
-function scrollTracking(){
 
+function scrollTracking()
+{
   var wt = $(window).scrollTop();
   var wh = $(window).height();
-  var et = $('.about').offset().top;
-  var eh = $('.about').outerHeight();
-  if (wt + wh >= et && wt + wh - eh * 2 <= et + (wh - eh))
-    {
-      if((200-((wt+wh-et)/eh*100)>0)&&(200-(wt+wh-et)/eh*100>100))
-        {
-        	if ($(window).width() >= '950')
-  			{
-            $("header").css("background","linear-gradient(to bottom, #1d1d1d "+(100-((wt+wh-et)/eh*100))+"%,#1d1d1d 0%)");
-        		}
-        		else{
-        			$("#nav_bar nav a.active").removeAttr( 'style' );
-            	$("#nav_bar nav a").removeAttr( 'style' );
-            	$("#nav_bar ul li a:hover").removeAttr( 'style' );
-            	$("#nav_bar nav a").removeAttr( 'style' );
-            	$("#nav_bar nav a i.icon-prof").removeAttr( 'style' );
-            	$(".logo").removeAttr( 'style' );
-        		}
-            if((100-((wt+wh-et)/eh*100))<38)
-            {
-            	if ($(window).width() >= '950')
-  			      {
-            	$("#nav_bar nav a.active").css("color","#000000");
-            	$("#nav_bar nav a").css("color","#000000");
-            	$("#nav_bar ul li a:hover").css("color","#000000");
-            	$("#nav_bar nav a").css("color","#000000");
-            	$("#nav_bar nav a i.icon-prof").css("color","#08fdd8");
-            	$(".logo").css("color","#000000");
-              $(".skill-link").removeClass('active')
-            	}
-            }
-            else
-            {
-            	$("#nav_bar nav a.active").removeAttr( 'style' );
-            	$("#nav_bar nav a").removeAttr( 'style' );
-            	$("#nav_bar ul li a:hover").removeAttr( 'style' );
-            	$("#nav_bar nav a").removeAttr( 'style' );
-            	$("#nav_bar nav a i.icon-prof").removeAttr( 'style' );
-              $(".logo").removeAttr( 'style' );
-            }
-        }
-        else
-        {
-        	if ($(window).width() >= '950')
-  		{
-          if(((wt+wh-et)/eh*100-100)>95){
-            $("header").css("background","linear-gradient(to bottom, white "+100+"%,#1d1d1d 0%)");
-            }
-            else
-            {
-              $("header").css("background","linear-gradient(to bottom, white "+((wt+wh-et)/eh*100-100)+"%,#1d1d1d 0%)");
-            }
-  	      }
-
-        }
-      block_show = true;
-    }
-    else {
-    	if ($(window).width() >= '950')
+  var et = $('.home').offset().top;
+  var eh = $('.home').outerHeight();
+  var et1 = $('.about').offset().top;
+  var eh1 = $('.about').outerHeight();
+  var et2 = $('.skills').offset().top;
+  var eh2 = $('.skills').outerHeight();
+  var et3 = $('.my_work').offset().top;
+  var eh3 = $('.my_work').outerHeight();
+  var et4 = $('.contact').offset().top;
+  var eh4 = $('.contact').outerHeight();
+  if (wt + wh >= et+eh*0.4 && wt + wh - eh * 2 <= et + (wh - eh*1.3))
   {
-      if (block_show == null || block_show == true) {
-        $("header").css("background","linear-gradient(to top, #1d1d1d "+100+"%,white 0%)");
-      }
-      block_show = false;
-    }
+    $('#console').html('Блок home в области видимости');
   }
-  if((100-((wt+wh-et)/eh*100))<=0)
+  if (wt + wh >= et1+eh1*0.4 && wt + wh - eh1 * 2 <= et1 + (wh - eh1*1.3))
   {
-    if((wt+wh-et)/eh*100-100>35)
-    {
-      /*if ($(window).width() >= '950')
-      {
-        $("#nav_bar nav a.active").removeAttr( 'style' );
-        $("#nav_bar nav a").removeAttr( 'style' );
-        $("#nav_bar ul li a:hover").removeAttr( 'style' );
-        $("#nav_bar nav a").removeAttr( 'style' );
-        $("#nav_bar nav a i.icon-prof").removeAttr( 'style' );
-        $(".logo").removeAttr( 'style' );
-        
-      }*/
-      if(setting==false){
-       $(".home-link").removeClass('active')
-       $(".skill-link").toggleClass('active')
-       setting=true
-      }
-    }
-    else
-    {
-      if ($(window).width() >= '950')
-        {
-        if(setting==true)
-        {
-          $(".skill-link").removeClass('active')
-          $(".home-link").toggleClass('active')
-          setting=false
-        }
-        /*$("#nav_bar nav a.active").css("color","#000000");
-        $("#nav_bar nav a").css("color","#000000");
-        $("#nav_bar ul li a:hover").css("color","#000000");
-        $("#nav_bar nav a").css("color","#000000");
-        $("#nav_bar nav a i.icon-prof").css("color","#08fdd8");
-        $(".logo").css("color","#000000");*/
-        }
-    }
+    $('#console').html('Блок about в области видимости');
+  }
+  if (wt + wh >= et2+eh2*0.4 && wt + wh - eh2 * 2 <= et2 + (wh - eh2*1.3))
+  {
+    $('#console').html('Блок skills в области видимости');
+  }
+  if (wt + wh >= et3+eh3*0.4 && wt + wh - eh3 * 2 <= et3 + (wh - eh3*1.3))
+  {
+    $('#console').html('Блок my_work в области видимости');
+  }
+  if (wt + wh >= et4+eh4*0.3 && wt + wh - eh4 * 2 <= et4 + (wh - eh4*1.3))
+  {
+    $('#console').html('Блок contact в области видимости');
   }
 }
+
+$(window).scroll(function(){
+  scrollTracking();
+});
+  
+$(document).ready(function(){ 
+  scrollTracking();
+});
