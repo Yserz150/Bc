@@ -130,7 +130,7 @@ else
     }
   }
   else{
-  if (wt + wh >= et2+eh2*0.25 && wt + wh - eh2 * 2 <= et2 + (wh - eh2*1.3))
+  if (wt + wh >= et2+eh2*0.05 && wt + wh - eh2 * 2 <= et2 + (wh - eh2*1.3))
   {
     if(!$(".skill-link").hasClass("active"))
     {
