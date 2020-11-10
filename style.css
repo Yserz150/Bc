@@ -836,19 +836,6 @@ font-family: 'Raleway';
     background-color: #058e79;
     color: #1d1d1d;
 }
-#console {
-    position: fixed;
-    top: 0;
-    left: 50%;
-    width: 300px;
-    margin-left: -150px;
-    text-align: center;
-    background: #666;
-    padding: 10px;
-    opacity: 0.5;
-    color: #fff;
-    z-index: 100;
-}
 
 
 
@@ -962,6 +949,7 @@ font-family: 'Raleway';
     min-height: 0;
 }
 #nav_bar nav {
+    background-color: #1d1d1d;
     width: 42%;
     position: fixed;
     left: 50%;
