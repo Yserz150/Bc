@@ -117,7 +117,7 @@ else
     }
   }
   else{
-  if (wt + wh >= et5+eh5*0.4 && wt + wh - eh5 * 2 <= et5 + (wh - eh5*0.5))
+  if (wt + wh >= et5+eh5*0.4 && wt + wh - eh5 * 2 <= et5 + (wh - eh5*0.9))
   {
     if(!$(".about-link").hasClass("active"))
     {
@@ -130,7 +130,7 @@ else
     }
   }
   else{
-  if (wt + wh >= et2+eh2*0.45 && wt + wh - eh2 * 2 <= et2 + (wh - eh2*1.3))
+  if (wt + wh >= et2+eh2*0.25 && wt + wh - eh2 * 2 <= et2 + (wh - eh2*1.3))
   {
     if(!$(".skill-link").hasClass("active"))
     {
