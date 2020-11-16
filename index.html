@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Document</title>
+	<title>AXL Developer</title>
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap" rel="stylesheet">
@@ -12,26 +12,30 @@
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     
     <link rel="stylesheet" type="text/css" href="font-awesome.min.css">
+    <link rel="shortcut icon" href="img/logos.ico" type="image/png">
+    <link rel="stylesheet" href="plugins/alertifyjs/css/alertify.css">  
+	<!-- Alertify theme default -->  
+	<link rel="stylesheet" href="plugins/alertifyjs/css/themes/default.css">
 
 </head>
 <body style='overflow-x:hidden;'>
 	<header class="header">
 		<div id="nav_bar">
-			<a class="logo" href="#"><span>Web</span><br> baud</a>
+			<a class="logo" href="#"><span>Web</span><br> axld</a>
 			<nav class="en">
-                <a rel="index" href="#" class="home-link">
+                <a rel="index" href="#" id="home-scrol" class="home-link">
                 	<i class="icon-hom"></i>
                 </a>
-                <a rel="abouts" href="#" class="about-link">
+                <a rel="abouts" href="#" id="about-scrol" class="about-link">
                 	<i class="icon-prof"></i>
                 </a>
-                <a rel="skil" href="#" class="skill-link">
+                <a rel="skil" href="#" id="skill-scrol" class="skill-link">
                 	<i class="icon-gear"></i>
                 </a>
-                <a rel="gallery" href="#" class="work-link">
+                <a rel="gallery" href="#" id="work-scrol" class="work-link">
                 	<i class="icon-eye"></i>
                 </a>
-                <a rel="contacts" href="#" class="contact-link">
+                <a rel="contacts" href="#" id="contact-scrol" class="contact-link">
                 	<i class="icon-mail"></i>
                 </a>
             </nav>
@@ -46,7 +50,7 @@
             </a>
 		</div>
 	</header>
-	<div class="home">
+	<div class="home" id="home">
 		<div class="home__inner">
 			<div class="about_me">
 				<h1>Я Андрей Саввин, я</h1>
@@ -93,10 +97,10 @@
 						<span>Страна:</span><br>Россия
 					</div>
 					<div class="item_me age">
-						<span>Город:</span><br>Саратов
+						<span>Город:</span><br>Красноярск
 					</div>
 					<div class="item_me age">
-						<span>E-mail:</span><br>webdevre@gmail.com
+						<span>E-mail:</span><br>axld3v@gmail.com
 					</div>
 				</div>
 			</div>
@@ -124,7 +128,7 @@
 						<span>Город:</span><br>Саратов
 					</div>
 					<div class="item_me age">
-						<span>E-mail:</span><br>webdevre@gmail.com
+						<span>E-mail:</span><br>axld3v@gmail.com
 					</div>
 				</div>
 		</div>
@@ -145,10 +149,11 @@
 	</section>
 	<section class="skills">
 		<div class="container">
-			<h3 class="title__header">МОИ НАВЫКИ</h3>
+			<h3 class="title__header skill-header">МОИ НАВЫКИ</h3>
+			<div class="desc-work skill-desc">Языки программирования, которыми я владею: </div>
 		<div class="allcard">
 		<div class="fcard">
-		<div class="card" onclick="this.classList.toggle('expanded')">
+		<div class="card expanded" onclick="this.classList.toggle('expanded')">
 		<div class="logo_web">
 			<div class="textSkill">SITE</div>
 	  <div class="textSkill"style="filter: blur(1px);">SITE</div>
@@ -171,7 +176,7 @@
 		</div>
 		</div>
 		<div class="fcard">
-		<div class="card" onclick="this.classList.toggle('expanded')">
+		<div class="card expanded" onclick="this.classList.toggle('expanded')">
 			<div class="logo_web">
 				<div class="textSkill">SITE</div>
 			  <div class="textSkill"style="filter: blur(1px);">SITE</div>
@@ -196,7 +201,7 @@
 		</div>
 		</div>
 		<div class="fcard">
-		<div class="card" onclick="this.classList.toggle('expanded')">
+		<div class="card expanded" onclick="this.classList.toggle('expanded')">
 		<div class="logo_web">
 			<div class="textSkill">SITE</div>
 			  <div class="textSkill"style="filter: blur(1px);">SITE</div>
@@ -223,7 +228,7 @@
 		</div>
 		</div>
 		<div class="fcard">
-		<div class="card" onclick="this.classList.toggle('expanded')">
+		<div class="card expanded" onclick="this.classList.toggle('expanded')">
 		<div class="logo_web">
 			<div class="textSkill">SOFTWARE</div>
 			  <div class="textSkill"style="filter: blur(1px);">SOFTWARE</div>
@@ -370,34 +375,34 @@
 			<div class="desc-work">К сожалению сейчас тут нету моих работ, но они обязательно скоро появятся и будут пополняться!</div>
 		</div>
 	</section>
-	<section class="contact">
+	<section class="contact" id="contact">
 		<div class="contact__title title__header">КОНТАКТЫ</div>
 		<div class="twoblock">
 		    <div class="contact-form">
 		   		<div class="form-title">Возникло желание познакомиться поближе или уточнить детали? Воспользуйтесь этой формой и я обязательно отвечу Вам.</div>
 			    <div class="oblock">
 			    	<div class="name">
-			      		<input type="text" class="ani-border" placeholder="Имя">
+			      		<input type="text" id="name" class="ani-border" placeholder="Имя">
 			    	</div>
 				    <div class="email">
-				    	<input type="text" class="ani-border" placeholder="Email">
+				    	<input type="text" id="email" class="ani-border" placeholder="Email">
 				    </div>
 			    </div>
 			    <div class="oblock">
 				    <div class="subject">
-				        <input type="text" class="ani-border" placeholder="Тема">
+				        <input type="text" id="subj"class="ani-border" placeholder="Тема">
 				    </div>
 			    </div>
 				<div class="oblock">
 					<div class="message">
-						<textarea class="ani-border mtextArea" placeholder="Расскажите о проекте" name="msg"></textarea>
+						<textarea id="message" class="ani-border mtextArea" placeholder="Расскажите о проекте" name="msg"></textarea>
 					</div>
 				</div>
 		    </div>
 		    <div class="contact-social">
 		    	<input class="btn_send" type="button" value="Отправить">
 		    	<div class="social-email">
-		    		<div class="email_contact"><span>Email: </span>contact@example.com</div>
+		    		<div class="email_contact"><span>Email: </span>axld3v@gmail.com</div>
 
 		    		<div class="socialicon">
 		    			<a href="#" class="tg icon_footer">
@@ -520,6 +525,9 @@
 		    </div>
 	    </div>
 	</section>
+
+
+	<script src="plugins/alertifyjs/js/alertify.min.js"></script> 	
 	<script src="js/jquery-1.11.2.min.js"></script>
 	<script src="js/main1.js"></script>
 	<script src="js/main.js"></script>

@@ -121,8 +121,10 @@ padding: 150px 0;
     text-align: center;
     text-transform: uppercase;
     line-height: 1.15;
+    transition: all 0.35s ease-out;
 }
 .logo span{
+    transition: all 0.35s ease-out;
     font-size: 15px;
     color: #08fdd8;
 }#nav_bar {
@@ -314,7 +316,7 @@ src:url("fonts/GraphikSemibold.ttf") format("ttf")
     font-family:'Graphik-bold',sans-serif;
     font-weight:300;
     color: #f5f5f5;
-    font-size: 5em;
+    font-size: calc(1rem + 2.4vw);
     margin: 0;
     line-height: 1.3em;
     transition: all 0.3s ease-out;
@@ -329,7 +331,7 @@ src:url("fonts/GraphikSemibold.ttf") format("ttf")
     margin: 50px 0 75px 0;
     font-weight:500;
     font-family: "Montserrat",sans-serif;
-    font-size: 4em;
+    font-size: calc(1rem + 2.2vw);
     border-right: 4px solid #848383;
     transition: all 0.3s ease-out;
 }
@@ -620,7 +622,6 @@ justify-content: space-around;
     font-weight: 800;
     line-height: 0.9em;
     font-size: 70px;
-    word-spacing: 20px;
 }
 .textSkill{
     bottom: 3px;
@@ -665,7 +666,6 @@ justify-content: space-around;
     font-weight: 800;
     line-height: 0.9em;
     font-size: 70px;
-    word-spacing: 20px;
 }
 .desc-work{
 font-family: 'Raleway';
@@ -753,7 +753,11 @@ font-family: 'Raleway';
   background-size: 100% 100%, 52% 100%;
   transition: background-size .4s ease-in, background-position .4s ease-out;
 }
-
+.error-border{
+    background-image: linear-gradient(to top, #f26b38 3px, transparent 3px), linear-gradient(to top, #f26b38 3px, transparent 3px);
+    background-position: 0% 0%, 100% 0%;
+    background-size: 100% 100%, 52% 100%;
+}
 .contact__title{
     color: #fff;
 }
@@ -790,7 +794,6 @@ font-family: 'Raleway';
     margin: 10px 0 5px;
     font-family: 'Montserrat';
     font-weight: 300;
-    word-spacing: 30px;
         line-height: 1.5;
 }
 .email_contact span{
@@ -837,8 +840,12 @@ font-family: 'Raleway';
     color: #1d1d1d;
 }
 
-
-
+.skill-header{
+    margin-bottom: 60px;
+}
+.skill-desc{
+    margin-bottom: 30px;
+}
 
 
 
@@ -868,10 +875,9 @@ font-family: 'Raleway';
 }
 @media (max-width: 1250px){
     .about_me h1 {
-        font-size: 4em;
-    }
+/*        font-size: 4em;
+*/    }
     .out{
-        font-size: 3.5em;
     }
     .descript-logo {
     width: 90%;
@@ -893,11 +899,10 @@ font-family: 'Raleway';
     width: 140px;
 }
 .about_me h1{
-    font-size: 3.5em;
-    line-height: 1.2em;
+/*    font-size: 3.5em;
+*/    line-height: 1.2em;
     }
 .out{
-    font-size: 2.8em;
     padding: 0;
     border-right: 3px solid #848383;
 }
@@ -950,9 +955,9 @@ font-family: 'Raleway';
 }
 #nav_bar nav {
     background-color: #1d1d1d;
-    width: 42%;
+    width: 49%;
     position: fixed;
-    left: 50%;
+    left: 45%;
     margin-left: -19%;
     float: left;
     overflow: hidden;
@@ -968,7 +973,7 @@ font-family: 'Raleway';
 }
 #nav_bar nav a {
     float: left;
-    margin-left: 14%;
+    margin: 0 7%;
     line-height: 60px;
     height: 60px;
 }
@@ -1040,11 +1045,11 @@ font-family: 'Raleway';
     width: 112px;
 }
 .about_me h1{
-    font-size: 2.35em;
-    line-height: 1.4em;
+/*    font-size: 2.35em;
+*/    line-height: 1.4em;
+      font-size: calc(1rem + 3vw);
     }
 .out{
-    font-size: 1.75em;
     padding: 0px;
     border-right: 2px solid #848383;
 }
@@ -1108,6 +1113,7 @@ font-family: 'Raleway';
     }
 }
 @media (max-width: 530px){
+
     .email_contact {
     margin: 5px 0 10px;
     }
@@ -1120,12 +1126,10 @@ font-family: 'Raleway';
 .title__header{
     font-size: 3em;
     margin-bottom: 40px;
-    word-spacing: 3px;
 }
  .work__title{
     font-size: 3em;
     margin-bottom: 40px;
-    word-spacing: 3px;
 }
 .about_me
      h1{
@@ -1148,6 +1152,7 @@ font-family: 'Raleway';
 }
 #nav_bar nav a {
     width: 20%;
+    margin: 0;
     }
 #nav_bar nav.show {
     left: 0;
@@ -1220,8 +1225,8 @@ font-family: 'Raleway';
     font-size: 1.4em;
 }
 .about_me h1 {
-    font-size: 1.85em;
-    }
+/*    font-size: 1.85em;
+*/    }
 .item_me {
     width: 100%;
 }
@@ -1247,6 +1252,6 @@ font-family: 'Raleway';
 }
 @media (max-width: 260px){
     .about_me h1 {
-    font-size: 1.55em;
-}
+/*    font-size: 1.55em;
+*/}
 }
