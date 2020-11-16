@@ -331,7 +331,7 @@ src:url("fonts/GraphikSemibold.ttf") format("ttf")
     margin: 50px 0 75px 0;
     font-weight:500;
     font-family: "Montserrat",sans-serif;
-    font-size: calc(1rem + 2.2vw);
+    font-size: calc(1rem + 2vw);
     border-right: 4px solid #848383;
     transition: all 0.3s ease-out;
 }
